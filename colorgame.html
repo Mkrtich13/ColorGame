@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jeu en JS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body>
+    <header>
+      <h1>Bienvenue</h1>
+    </header>
+
+    <section>
+      <p>
+        Pour jouer à ce jeu, les règles sont simples il suffit de cliquer sur le carré dont la couleur est différente.<br>
+        Pour cela choisissez le nombre de carrés avec lesquels vous souhaiter jouer (minimum 3 et maximum 12) et le temps nécessaire en secondes (entre 3 et 10 secs).
+      </p>
+
+      <form id="settingsSquare" onsubmit="userSquareNb(); return false;">
+        <label for="settingsSquare__Nb">Nombre de carré:</label>
+        <input id="settingsSquare__Nb" type="number" value="0" min="3" max="12">
+        <input id="settingsSquare__submit" type="submit" value="Valider">
+      </form>
+      <form id="settingsTimer" onsubmit="userTimer(); return false;">
+        <label for="settingsTimer__Nb">Timer:</label>
+        <input id="settingsTimer__Nb" type="number" value="O" min="3" max="10">
+        <input id="settingsTimer__submit" type="submit" value="OK">
+      </form>
+      <input id="go" type="button" value="GO" onclick="">
+      <input id="stop" type="button" value="STOP" onclick="">
+      <p>Score: <span id="result"></span></p>
+
+
+    </section>
+
+
+  <script type="text/javascript" src="js/colorgame.js"></script>
+  </body>
+</html>
