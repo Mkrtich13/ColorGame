@@ -1,9 +1,13 @@
-function userSquareNb() {
-  var squareNumber = document.getElementById("settingsSquare__Nb").value;
-  console.log(squareNumber);
+var squareNb;
+var timerNb;
+var turnNb;
+
+function userSettings() {
+  squareNb = document.querySelector("#settings__SquareNb").value;
+  timerNb = document.querySelector("#settings__TimerNb").value;
+  turnNb = document.querySelector("#settings__TurnNb").value;
 }
 
-function userTimer() {
-  var timer = document.getElementById("settingsTimer__Nb").value;
-  console.log(timer);
+function log() {
+  console.log(squareNb, timerNb, turnNb);
 }
