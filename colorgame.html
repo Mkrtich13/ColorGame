@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Jeu en JS</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
+
   <body class="container">
     <header>
       <h1 class="">Color-Game</h1>
@@ -15,28 +17,30 @@
         Pour jouer à ce jeu, les règles sont simples il suffit de cliquer sur le carré dont la couleur est différente.<br>
         Pour cela choisissez le nombre de carrés avec lesquels vous souhaiter jouer (minimum 3 et maximum 10) et le temps nécessaire en secondes (entre 3 et 10 secs) et le nombres de manches limité entre 1 et 10.
       </p>
-
-      <form id="settings" class="form-control" onsubmit="userSettings(); log(); return false;">
-        <label for="settings__SquareNb">Nombre de carrés:</label>
-        <input id="settings__SquareNb" type="number" value="3" min="3" max="10" required>
-
-        <label for="settings__TimerNb">Nombre de seconde(s):</label>
-        <input id="settings__TimerNb" type="number" value="3" min="3" max="10" required>
-
-        <label for="settings__TurnNb">Nombre de manche(s):</label>
-        <input id="settings__TurnNb" type="number" value="1" min="1" max="10" required>
+      <form id="settings"  onsubmit="userSettings(); log(); createSquare(); getRandomIndex(); return false;">
+        <div>
+          <label for="settings__SquareNb">Nombre de carrés:</label>
+          <input id="settings__SquareNb" type="number" value="3" min="3" max="10" required>
+        </div>
+        <div>
+          <label for="settings__TimerNb">Nombre de seconde(s):</label>
+          <input id="settings__TimerNb" type="number" value="3" min="3" max="10" required>
+        </div>
+        <div>
+          <label for="settings__TurnNb">Nombre de manche(s):</label>
+          <input id="settings__TurnNb" type="number" value="1" min="1" max="10" required>
+        </div>
         <input id="go" class="btn" type="submit" value="START">
       </form>
 
+      <div id="carre" class="flex-container"></div>
 
-
-      <input id="stop" class="btn" type="button" value="STOP" onclick="">
-      <p>Score: <span id="result"></span></p>
-
+      <div>
+        <input id="stop" class="btn" type="button" value="STOP">
+        <p>Score: <span id="result"></span></p>
+      </div>
 
     </section>
-
-
-  <script type="text/javascript" src="js/colorgame.js"></script>
+    <script type="text/javascript" src="js/colorgame.js"></script>
   </body>
 </html>
